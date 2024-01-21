@@ -6,105 +6,65 @@ import { HousingLocation } from './housing-location';
 export class HousingService {
 
   constructor() { }
-  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
+  readonly baseUrl = './../assets/samplePlants';
   housingLocationList: HousingLocation[] = [
     {
       id: 0,
-      name: 'Acme Fresh Start Housing',
+      name: 'Bozo',
       city: 'Chicago',
       state: 'IL',
-      photo: `${this.baseUrl}/bernard-hermant-CLKGGwIBTaY-unsplash.jpg`,
+      photo: `${this.baseUrl}/begoniaPolkaDot.jpg`,
       availableUnits: 4,
       wifi: true,
       laundry: true
     },
     {
       id: 1,
-      name: 'A113 Transitional Housing',
+      name: 'Mr. Swan',
       city: 'Santa Monica',
       state: 'CA',
-      photo: `${this.baseUrl}/brandon-griggs-wR11KBaB86U-unsplash.jpg`,
+      photo: `${this.baseUrl}/birdsOfParadise.jpg`,
       availableUnits: 0,
       wifi: false,
       laundry: true
     },
     {
       id: 2,
-      name: 'Warm Beds Housing Support',
+      name: 'Johnny',
       city: 'Juneau',
       state: 'AK',
-      photo: `${this.baseUrl}/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg`,
+      photo: `${this.baseUrl}/fiddleLeafFig.jpeg`,
       availableUnits: 1,
       wifi: false,
       laundry: false
     },
     {
       id: 3,
-      name: 'Homesteady Housing',
+      name: 'St. Chill',
       city: 'Chicago',
       state: 'IL',
-      photo: `${this.baseUrl}/ian-macdonald-W8z6aiwfi1E-unsplash.jpg`,
+      photo: `${this.baseUrl}/norfolkIslandPine.jpg`,
       availableUnits: 1,
       wifi: true,
       laundry: false
     },
     {
       id: 4,
-      name: 'Happy Homes Group',
+      name: 'Willy',
       city: 'Gary',
       state: 'IN',
-      photo: `${this.baseUrl}/krzysztof-hepner-978RAXoXnH4-unsplash.jpg`,
+      photo: `${this.baseUrl}/redPineapple.jpg`,
       availableUnits: 1,
       wifi: true,
       laundry: false
     },
     {
       id: 5,
-      name: 'Hopeful Apartment Group',
+      name: 'Stinky',
       city: 'Oakland',
       state: 'CA',
-      photo: `${this.baseUrl}/r-architecture-JvQ0Q5IkeMM-unsplash.jpg`,
+      photo: `${this.baseUrl}/rottingFleshFlower.jpg`,
       availableUnits: 2,
-      wifi: true,
-      laundry: true
-    },
-    {
-      id: 6,
-      name: 'Seriously Safe Towns',
-      city: 'Oakland',
-      state: 'CA',
-      photo: `${this.baseUrl}/phil-hearing-IYfp2Ixe9nM-unsplash.jpg`,
-      availableUnits: 5,
-      wifi: true,
-      laundry: true
-    },
-    {
-      id: 7,
-      name: 'Hopeful Housing Solutions',
-      city: 'Oakland',
-      state: 'CA',
-      photo: `${this.baseUrl}/r-architecture-GGupkreKwxA-unsplash.jpg`,
-      availableUnits: 2,
-      wifi: true,
-      laundry: true
-    },
-    {
-      id: 8,
-      name: 'Seriously Safe Towns',
-      city: 'Oakland',
-      state: 'CA',
-      photo: `${this.baseUrl}/saru-robert-9rP3mxf8qWI-unsplash.jpg`,
-      availableUnits: 10,
-      wifi: false,
-      laundry: false
-    },
-    {
-      id: 9,
-      name: 'Capital Safe Towns',
-      city: 'Portland',
-      state: 'OR',
-      photo: `${this.baseUrl}/webaliser-_TPTXZd9mOo-unsplash.jpg`,
-      availableUnits: 6,
       wifi: true,
       laundry: true
     }
