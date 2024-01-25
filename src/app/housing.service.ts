@@ -7,11 +7,7 @@ export class HousingService {
 
   constructor() { }
   readonly baseUrl = './../assets/samplePlants/';
-  readonly url = 'http://localhost:5123/WeatherForecast'
-
-  // getAllHousingLocations(): HousingLocation[] {
-  //   return this.housingLocationList;
-  // }
+  readonly url = 'http://localhost:5123/Plant'
 
   async getAllHousingLocations(): Promise<HousingLocation[]> {
     const data = await fetch(this.url);
