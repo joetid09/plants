@@ -6,76 +6,21 @@ import { HousingLocation } from './housing-location';
 export class HousingService {
 
   constructor() { }
-  readonly baseUrl = './../assets/samplePlants';
-  housingLocationList: HousingLocation[] = [
-    {
-      id: 0,
-      name: 'Bozo',
-      city: 'Chicago',
-      state: 'IL',
-      photo: `${this.baseUrl}/begoniaPolkaDot.jpg`,
-      availableUnits: 4,
-      wifi: true,
-      laundry: true
-    },
-    {
-      id: 1,
-      name: 'Mr. Swan',
-      city: 'Santa Monica',
-      state: 'CA',
-      photo: `${this.baseUrl}/birdsOfParadise.jpg`,
-      availableUnits: 0,
-      wifi: false,
-      laundry: true
-    },
-    {
-      id: 2,
-      name: 'Johnny',
-      city: 'Juneau',
-      state: 'AK',
-      photo: `${this.baseUrl}/fiddleLeafFig.jpeg`,
-      availableUnits: 1,
-      wifi: false,
-      laundry: false
-    },
-    {
-      id: 3,
-      name: 'St. Chill',
-      city: 'Chicago',
-      state: 'IL',
-      photo: `${this.baseUrl}/norfolkIslandPine.jpg`,
-      availableUnits: 1,
-      wifi: true,
-      laundry: false
-    },
-    {
-      id: 4,
-      name: 'Willy',
-      city: 'Gary',
-      state: 'IN',
-      photo: `${this.baseUrl}/redPineapple.jpg`,
-      availableUnits: 1,
-      wifi: true,
-      laundry: false
-    },
-    {
-      id: 5,
-      name: 'Stinky',
-      city: 'Oakland',
-      state: 'CA',
-      photo: `${this.baseUrl}/rottingFleshFlower.jpg`,
-      availableUnits: 2,
-      wifi: true,
-      laundry: true
-    }
-  ];
+  readonly baseUrl = './../assets/samplePlants/';
+  readonly url = 'http://localhost:5123/WeatherForecast'
 
-  getAllHousingLocations(): HousingLocation[] {
-    return this.housingLocationList;
+  // getAllHousingLocations(): HousingLocation[] {
+  //   return this.housingLocationList;
+  // }
+
+  async getAllHousingLocations(): Promise<HousingLocation[]> {
+    const data = await fetch(this.url);
+    return await data.json();
   }
 
-  getHousingLocationById(id: number): HousingLocation | undefined {
-    return this.housingLocationList.find(housingLocation => housingLocation.id === id);
+  async getHousingLocationById(id: number): Promise<HousingLocation | undefined> {
+    const data = await fetch(`${this.url}/${id}`);
+    return await data.json() ?? {};
   }
 
   submitApplication(firstName: string, lastName: string, email: string) {
