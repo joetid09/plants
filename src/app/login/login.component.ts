@@ -19,5 +19,6 @@ export class LoginComponent {
 
   submitLogin() {
     console.log(this.loginForm.value);
-  }
+    this.loginForm.value.username ?? '',
+      this.loginForm.value.password ?? '',
 }
