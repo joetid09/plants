@@ -4,11 +4,11 @@
         <form [formGroup]="loginForm" (submit)=" submitLogin()">
             <div>
                 <label for="user-name">Username:</label>
-                <input type="text" id="username" name="username" formControlName="username" required>
+                <input type="username" id="username" name="username" formControlName="username" required>
             </div>
             <div>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" formControlname="password" required>
+                <input type="password" id="password" name="password" formControlName="password" required>
             </div>
             <button type="submit">Login</button>
             <a href="/account-create">Create new account</a>
